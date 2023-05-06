@@ -8,7 +8,7 @@ const {logger} = require('./middleware/logEvents');
 const errorHandler = require('./middleware/errorHandler');
 const mongoose = require('mongoose');
 const connectDB = require('./config/dbConn')
-const PORT = process.env.PORT || 3000;
+const PORT = 3000;
 
 //connect to Mongo DB
 
@@ -18,7 +18,7 @@ connectDB();
 app.use(logger);
 
 // cross-origin resource sharing
-app.use(cors());
+app.use(cors(corsOptions));
 
 //middleware handling urlencoded data "content-type: application/x-www-form-urlencoded"
 app.use(express.urlencoded({extended: false}));
@@ -31,7 +31,7 @@ app.use('/', express.static(path.join(__dirname, '/public')));
 
 //routes
 app.use('/', require('./routes/root'));
-app.use('/*', require('./routes/api/states'));
+app.use('/states', require('./routes/api/states'));
 
 
 app.all('*', (req, res) => {
