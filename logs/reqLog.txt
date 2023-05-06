@@ -227,3 +227,10 @@
 20230506	19:34:19	e522e9a8-dce0-427d-a0ae-80e2054646a0	POST	undefined	/states/GA
 20230506	19:34:51	3e3bb8b1-131f-4015-bef4-1fb6196765e2	GET	undefined	/states/GA
 20230506	19:35:22	7e5d5beb-afc6-481a-9a84-d806b7bf82ea	GET	undefined	/states/GA/state
+20230506	19:41:09	8beb233c-5ed0-405b-a101-049c9f350a23	GET	undefined	/states/GA/
+20230506	19:41:52	f992b608-e16e-444c-a269-d00f1ba0ea7e	GET	undefined	/states/
+20230506	19:42:40	d3aa7057-a32b-4149-9fd0-2c6d85d4f765	GET	undefined	/states/
+20230506	19:43:11	a49609a5-2c62-4943-992d-90cddb74f324	GET	undefined	/states/
+20230506	19:44:43	96e1c55b-d859-4df9-8aa8-0e0e0c7d7fac	GET	undefined	/
+20230506	19:44:51	e9369b47-a952-4d13-bdd4-a7ff5f6314e8	GET	undefined	/states
+20230506	19:45:15	ec9ea1a4-6e75-404c-a69a-2c27b08e1506	GET	undefined	/states
