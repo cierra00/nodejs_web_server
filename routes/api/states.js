@@ -5,7 +5,7 @@ const path = require('path');
 const statesController = require ('../../controller/statesController')
 
 
-router.route('/states')
+router.route('/')
 .get(statesController.getAllStates)
 .post(statesController.createNewState)
 .put(statesController.updateState)
