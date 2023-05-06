@@ -102,3 +102,11 @@
 20230506	16:40:24	1d5351a1-89dc-416d-a7e9-72e4dd87074c	GET	undefined	/
 20230506	16:40:27	b543b58b-ba05-4c44-a7a6-9b4c7ce59045	GET	undefined	/
 20230506	16:40:29	4b10a237-7a71-4428-8672-383ae6afb096	GET	undefined	/
+20230506	17:02:59	ebe88ce1-d103-4062-9956-08e7fc7d7323	GET	undefined	/s
+20230506	17:04:09	67574cdf-8b5c-4adb-aad5-15527ef00f2a	GET	undefined	/
+20230506	17:04:09	eb975458-1ed7-4a7c-b174-670141ba9384	GET	undefined	/css/style.css
+20230506	17:04:14	ae6924b6-8a70-4733-8001-b4fe1a52d807	GET	undefined	/3
+20230506	17:07:56	9e0d31ed-448e-4c1d-b854-f9f737e0312a	GET	undefined	/views/404.html
+20230506	17:07:56	e148547d-cc32-4337-8168-dee6c068d2dd	GET	undefined	/css/style.css
+20230506	17:08:12	e653a922-fd0a-41cb-ab88-2375b0be75d6	GET	undefined	/sD:/node_practice/nodejs_web_server/views/404.html
+20230506	17:08:19	5bd102c7-88c2-499c-900d-f2cdc2c928db	GET	undefined	/s

@@ -1,1 +1,3 @@
 20230506	15:13:47	57258cad-3ad5-43ca-aecd-fbb1b589ff90	Error: Cannot set headers after they are sent to the client
+20230506	17:02:59	d046a7e1-38c5-49db-9986-e2a8272b38d5	Error: ENOENT: no such file or directory, stat 'D:\node_practice\nodejs_web_server\routes\views\404.html'
+20230506	17:04:14	9b728979-3944-46a3-b639-0a7e89252422	Error: ENOENT: no such file or directory, stat 'D:\node_practice\nodejs_web_server\routes\views\404.html'
