@@ -13,8 +13,9 @@ const data = {
 }*/
 const getAllStates =  async (req, res)=>{
     const states = await State.find();
-    res.status(201).json(data.states)
-    if(!states) return res.status(404).json({'message': 'No Employees Found'});
+    //res.status(201).json(data.states)
+
+    if(!states) return res.status(404).json({'message': 'No States Found'});
     res.json(states);
 
 }
@@ -37,7 +38,7 @@ const createNewState = async (req,res)=>{
     try{
         const result = await State.create({
             code: req.body.code,
-            funFacts: req.body.funFacts
+            funfacts: req.body.funfacts
         })
         res.status(201).json(result);
     } catch(err){
@@ -96,24 +97,24 @@ const DeleteState = async (req,res)=>{
     const result = await employee.deleteOne({__id: req.body.id });
     res.json(result);
 }
-/*
-const getState = (req,res)=>{
-    const state = data.states.find(emp => emp.code === parseInt(req.params.code));
+
+const getState = (req, res) => {
+    const state = data.states.find(emp => emp.code === (req.params.code));
     if (!state) {
-        return res.status(400).json({ "message": `State ID ${req.params.code} not found` });
+        return res.status(400).json({ "message": `Employee ID ${req.params.code} not found` });
     }
     res.json(state);
-}*/
+} /*
 const getState = async (req,res)=>{
-    if(!req?.params?.id) return res.status(400).json({'message': 'State Id required' })
+    if(!req?.params?.code) return res.status(400).json({'message': 'State Id required' })
    
-    const state = await State.findOne({__id: req.params.id}).exec();
+    const state = await State.findOne({__id: req.params.code}).exec();
     if (!state) {
         return res.status(400).json({ "message": `State ID ${req.params.code} not found` });
     }
     res.json(state);
 }
-
+*/
 module.exports = {
     getAllStates,
     createNewState,

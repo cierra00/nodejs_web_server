@@ -1,3 +1,12 @@
 20230506	15:13:47	57258cad-3ad5-43ca-aecd-fbb1b589ff90	Error: Cannot set headers after they are sent to the client
 20230506	17:02:59	d046a7e1-38c5-49db-9986-e2a8272b38d5	Error: ENOENT: no such file or directory, stat 'D:\node_practice\nodejs_web_server\routes\views\404.html'
 20230506	17:04:14	9b728979-3944-46a3-b639-0a7e89252422	Error: ENOENT: no such file or directory, stat 'D:\node_practice\nodejs_web_server\routes\views\404.html'
+20230506	17:49:57	a9437d9d-84d8-4978-8b8f-687084b9bc6f	ReferenceError: parseString is not defined
+20230506	18:20:06	b5387cc6-44b1-4b30-af24-1bd6b1b972bd	Error: Cannot set headers after they are sent to the client
+20230506	18:22:10	f95d95bf-f14b-4fe9-b66a-69699eabfd41	ReferenceError: code is not defined
+20230506	18:22:31	3eca0023-98e6-4bfb-8b1a-3221eb4c04bc	ReferenceError: states is not defined
+20230506	18:35:11	a26ad821-42b9-4c49-8567-2f7f37dcf78e	MongooseError: Model.find() no longer accepts a callback
+20230506	18:35:16	f15de595-2667-4af5-9468-5e76d3ce66e1	MongooseError: Model.find() no longer accepts a callback
+20230506	18:36:32	2952a72f-db9f-4cb2-bec6-cf2e8d2205c8	ReferenceError: States is not defined
+20230506	18:37:14	dec9c20a-e825-43ff-b5f7-e7bca7dc8ba4	ReferenceError: States is not defined
+20230506	18:37:19	dc4f4466-a40b-4e60-868f-1443e7f1b90d	ReferenceError: States is not defined
