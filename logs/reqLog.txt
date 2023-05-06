@@ -110,3 +110,5 @@
 20230506	17:07:56	e148547d-cc32-4337-8168-dee6c068d2dd	GET	undefined	/css/style.css
 20230506	17:08:12	e653a922-fd0a-41cb-ab88-2375b0be75d6	GET	undefined	/sD:/node_practice/nodejs_web_server/views/404.html
 20230506	17:08:19	5bd102c7-88c2-499c-900d-f2cdc2c928db	GET	undefined	/s
+20230506	17:09:15	c89d3948-b474-42c4-9670-7ae2ac13f583	GET	undefined	/s
+20230506	17:15:47	38e7e2d0-d1f8-4dc3-a68a-abcd4b9bc232	GET	undefined	/states
