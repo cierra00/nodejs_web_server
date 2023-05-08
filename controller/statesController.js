@@ -8,14 +8,33 @@ const data = {
 
 
 
-/*const getAllStates = (req, res)=>{
-    res.status(201).json(data.states);
-}*/
-const getAllStates =  async (req, res)=>{
-    const states = await State.find();
-    await res.status(201).json(data.states)
+const getAllStates = async(req, res)=>{
+   const statesData = data.states;
+   
+    const funfact = await State.find();
+   const result = [...statesData, funfact]
+    res.status(201).json(result);
+} /*
+const getAllStates = async (req, res) => {
+    const statesData = data.statesData;
+    const contig = req.query.contig;
+    for (stateRecord of statesData ) {
+        const funfact = await StatesDB.findOne({stateCode: stateRecord.code}, 'funfacts').lean();
+        if(funfact){
+            stateRecord.funfacts = [];
+            stateRecord.funfacts = stateRecord.funfacts.concat(funfact.funfacts);
+        }
+    }/*
+const getAllEmployees = async (req, res) => {
+    const employees = await Employee.find();
+    if (!employees) return res.status(204).json({ 'message': 'No employees found.' });
+    res.json(employees);
+}
 
-    if(!states) return res.status(404).json({'message': 'No States Found'});
+const getAllStates = async (req, res)=>{
+    
+    const states = await State.find({})
+    if (!states) return res.status(204).json({ 'message': 'No employees found.' });
     res.json(states);
 
 }
