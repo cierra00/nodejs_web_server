@@ -10,7 +10,6 @@ const data = {
 
 const getAllStates = async(req, res)=>{
    const statesData = data.states;
-   res.json(statesData);
    
     const funfact = await State.find();
    const result = [...statesData, funfact]

@@ -306,3 +306,5 @@
 20230508	07:09:01	40def6b5-1af1-4ae7-861c-920c2cc40a95	GET	undefined	/states
 20230508	07:12:16	4b063004-51ab-4e4b-9a14-a0a19c678d00	GET	http://localhost:3000	/ws
 20230508	19:25:50	2981cc53-0f1e-405b-bbfd-a1ec7fda6697	GET	http://localhost:3000	/ws
+20230508	20:02:11	a3d821f2-afc8-4aa1-93db-861daeb338ab	GET	undefined	/states
+20230508	20:02:40	c4e11795-db7f-46cc-87b3-cff787f34b22	GET	undefined	/states
