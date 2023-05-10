@@ -37,10 +37,12 @@ if(contig===true){
    if(contig===false){
     console.log(contig)
     await res.status(201).json(notContig);
-   } else {
+   } 
+   if(contig===undefined)
     console.log(contig)
     await res.status(201).json(statesData);
-   }
+    
+   
 
    
    
