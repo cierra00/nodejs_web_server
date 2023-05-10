@@ -25,24 +25,25 @@ const getAllStates = async(req, res)=>{
    const isContig = await statesData.filter( function(code){
     return code.code !== "AK" && code.code !== "HI";
    });
-   const notContig = await statesData.filter( function(code){
+   const notContig = statesData.filter( function(code){
     return code.code == "AK" || code.code ==="HI";
    });
 
-if(contig===true){
-    console.log(contig)
-    await res.status(201).json(isContig);
+if(!req.query.contig){
+   console.log('this sucks')
+   return await res.json(statesData);
+   
+}
+
+else if(contig ===true){
+    console.log("S")
+   return await res.json(isContig);
    }
    
-   if(contig===false){
+  else {
     console.log(contig)
-    await res.status(201).json(notContig);
-   } 
-   if(contig===undefined)
-    console.log(contig)
-    await res.status(201).json(statesData);
-    
-   
+    return await res.json(notContig);
+   }
 
    
    
@@ -89,7 +90,7 @@ const createNewState = async (req,res)=>{
     try{
         const result = await State.create({
             stateCode: req.body.stateCode,
-            funfacts: req.body.funfacts
+            funfacts: req.body.funfact
         })
         res.status(201).json(result);
     } catch(err){
