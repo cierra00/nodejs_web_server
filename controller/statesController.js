@@ -147,24 +147,32 @@ const DeleteState = async (req,res)=>{
     const result = await employee.deleteOne({__id: req.body.id });
     res.json(result);
 }
-
+/*
 const getState = (req, res) => {
-    const state = data.states.find(emp => emp.stateCode === (req.params.code));
+    const state = data.states.find(sta => sta.stateCode === (req.params.code));
     if (!state) {
-        return res.status(400).json({ "message": `Employee ID ${req.params.code} not found` });
+        return res.status(400).json({ "message": `State Code ${req.params.code} not found` });
     }
     res.json(state);
-} /*
+} */
 const getState = async (req,res)=>{
-    if(!req?.params?.code) return res.status(400).json({'message': 'State Id required' })
-   
+    const statesData = await data.states;
+    
+    if(!req?.params?.code) return res.status(400).json({'message': 'State code required' })
+    console.log(req.params.code)
+
+    const singleState = await statesData.filter( function(code){
+        return code.code === req.params.code;
+       });
     const state = await State.findOne({__id: req.params.code}).exec();
-    if (!state) {
+   res.json(singleState)
+   
+   /* if (!state) {
         return res.status(400).json({ "message": `State ID ${req.params.code} not found` });
     }
     res.json(state);
+} */
 }
-*/
 module.exports = {
     getAllStates,
     createNewState,
