@@ -1,3 +1,4 @@
+const { is } = require('date-fns/locale');
 const State = require('../model/State')
 const data = {
     states: require('../model/statesData.json'),
@@ -9,12 +10,37 @@ const data = {
 
 
 const getAllStates = async(req, res)=>{
-   const statesData = data.states;
-  
+    
+
+    //Get states from json file
+   const statesData = await data.states;
+   //get states from dB
+   const funfacts = await State.find();
+   //combine all states
+   const result =  [...statesData, ...funfacts];
+    //congtig & not contig
+
+    //params
+    const contig = req.query.contig;
+   const isContig = await statesData.filter( function(code){
+    return code.code !== "AK" && code.code !== "HI";
+   });
+   const notContig = await statesData.filter( function(code){
+    return code.code == "AK" || code.code ==="HI";
+   });
+
+if(contig){
+    await res.json(isContig);
+   }
    
-    const funfacts = await State.find();
-   const result = await [...statesData, funfacts]
-    res.status(201).json(result);
+   if(!contig){
+    await res.json(notContig)
+   }
+
+  
+
+   
+   
 } /*
 const getAllStates = async (req, res) => {
     const statesData = data.statesData;
