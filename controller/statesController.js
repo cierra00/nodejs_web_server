@@ -35,16 +35,14 @@ if(!req.query.contig){
    
 }
 
-else if(contig ===true){
-    console.log("S")
+else if(contig==="true"){
+    console.log(typeof(contig))
    return await res.json(isContig);
    }
-   
-  else {
-    console.log(contig)
-    return await res.json(notContig);
+   else if(contig==="false"){
+    console.log(typeof(contig))
+   return await res.json(notContig);
    }
-
    
    
 } /*
