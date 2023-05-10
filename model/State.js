@@ -2,11 +2,11 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const stateSchema = new Schema({
-   code: {
+   stateCode: {
     type: String,
     required: true
    },
-   funfacts: {
+   funfact: {
     type: Array,
     required: true
    }

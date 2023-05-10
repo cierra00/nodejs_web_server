@@ -52,12 +52,12 @@ const createNewState = (req,res)=>{
 }
 */
 const createNewState = async (req,res)=>{
-    if(!req?.body?.code){
+    if(!req?.body?.stateCode){
         return res.status(400).json({'Message': "State code is required"})
     }
     try{
         const result = await State.create({
-            code: req.body.code,
+            stateCode: req.body.stateCode,
             funfacts: req.body.funfacts
         })
         res.status(201).json(result);
