@@ -56,3 +56,4 @@
     |     property 's' -> object with constructor 'Object'
     |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
     --- property 'client' closes the circle
+20230510	14:00:44	2cff68ac-2ba4-4f44-bbd3-eb753b3af9be	SyntaxError: Unexpected token ',', ..." out west", "Close t"... is not valid JSON

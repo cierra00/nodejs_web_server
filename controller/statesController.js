@@ -10,10 +10,10 @@ const data = {
 
 const getAllStates = async(req, res)=>{
    const statesData = data.states;
-   res.json(statesData);
+  
    
-    const funfact = await State.find();
-   const result = [...statesData, funfact]
+    const funfacts = await State.find();
+   const result = await [...statesData, funfacts]
     res.status(201).json(result);
 } /*
 const getAllStates = async (req, res) => {
@@ -119,7 +119,7 @@ const DeleteState = async (req,res)=>{
 }
 
 const getState = (req, res) => {
-    const state = data.states.find(emp => emp.code === (req.params.code));
+    const state = data.states.find(emp => emp.stateCode === (req.params.code));
     if (!state) {
         return res.status(400).json({ "message": `Employee ID ${req.params.code} not found` });
     }
