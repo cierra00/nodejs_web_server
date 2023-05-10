@@ -30,11 +30,11 @@ const getAllStates = async(req, res)=>{
    });
 
 if(contig){
-    await res.json(isContig);
+    await res.status(201).json(isContig);
    }
    
    if(!contig){
-    await res.json(notContig)
+    await res.status(201).json(notContig)
    }
 
   
