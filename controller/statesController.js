@@ -29,15 +29,18 @@ const getAllStates = async(req, res)=>{
     return code.code == "AK" || code.code ==="HI";
    });
 
-if(contig){
+if(contig===true){
+    console.log(contig)
     await res.status(201).json(isContig);
    }
    
-   if(!contig){
-    await res.status(201).json(notContig)
+   if(contig===false){
+    console.log(contig)
+    await res.status(201).json(notContig);
+   } else {
+    console.log(contig)
+    await res.status(201).json(statesData);
    }
-
-  
 
    
    

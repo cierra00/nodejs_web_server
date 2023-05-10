@@ -26,3 +26,15 @@
 20230510	15:20:25	fa477f37-05c5-4bb2-99e8-3f2ab3b1e514	GET	undefined	/states?contig=true
 20230510	15:20:27	b93220d9-e28b-4782-b0c9-1ec4f553a66a	GET	undefined	/states?contig=true
 20230510	15:20:54	23b59dfa-74c5-48c3-8ca4-65bbce11378d	GET	undefined	/states?contig=false
+20230510	15:25:21	c2b53b81-50d3-44a2-a126-bd761580a546	GET	undefined	/states/ga
+20230510	15:25:25	9a9651e5-fc97-40f3-9584-63fffe56eddd	GET	undefined	/states/ga
+20230510	15:25:40	59285305-b385-45f0-b165-73905a07f716	GET	undefined	/states/?contig=true
+20230510	15:25:57	1c43b6f1-bc8d-483f-a7ca-c0b1e37551c5	GET	undefined	/states/?contig=false
+20230510	15:26:18	5fa9b988-c059-4202-a426-461451733f4c	GET	undefined	/states/?contig=false
+20230510	15:26:25	c5d0ed1f-512c-4a6a-8975-6e06408ab939	GET	undefined	/states/?contig=false
+20230510	15:28:05	77a82e9d-8592-42c6-9d31-625a79784fda	GET	undefined	/states/?contig=false
+20230510	15:28:32	e1eacc6d-befa-4683-b2af-27d9677621d0	GET	undefined	/states/?contig=false
+20230510	15:29:08	384d45d6-803d-456c-ad98-1075bab1059d	GET	undefined	/states/?contig=false
+20230510	15:29:42	7c38701b-fc92-4a33-a135-68eb53f09d45	GET	undefined	/states/?contig=true
+20230510	15:29:52	e87ae0e1-f1f8-4a06-9d31-e36740a12944	GET	undefined	/states/
+20230510	15:30:20	61dfd6ed-c07c-44c0-9264-672e31d4c33f	GET	undefined	/states/
