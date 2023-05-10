@@ -30,17 +30,17 @@ const getAllStates = async(req, res)=>{
    });
 
 if(!req.query.contig){
-   console.log('this sucks')
+   
    return await res.json(statesData);
    
 }
 
 else if(contig==="true"){
-    console.log(typeof(contig))
+    
    return await res.json(isContig);
    }
    else if(contig==="false"){
-    console.log(typeof(contig))
+   
    return await res.json(notContig);
    }
    
