@@ -227,9 +227,9 @@ const getFunfacts = async (req,res)=>{
                 const singleState = await statesData.filter( function(code){
                     return code.code === req.params.code.toUpperCase();
                    });
-               
-                   const capital = await singleState.map(sta => sta.population)
-               res.json(capital)
+                   const name = await singleState.map(sta => sta.state)
+                   const population = await singleState.map(sta => sta.admission_date)
+               res.json(` ${name}, ${population}`)
             
                 }
 
@@ -243,7 +243,7 @@ const getFunfacts = async (req,res)=>{
                         return code.code === req.params.code.toUpperCase();
                        });
                    
-                       const capital = await singleState.map(sta => sta.admission_date)
+                       const capital = await singleState.map(sta => sta.capital_city)
                    res.json(capital)
                 
                     }
