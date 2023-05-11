@@ -358,3 +358,11 @@
 20230510	21:00:57	4ca4f2ae-c8a0-4597-a472-21293f295e3c	GET	undefined	/states/
 20230510	21:01:42	3fd1b567-dc23-449e-98f4-cfd50b15bdc7	GET	undefined	/states/
 20230510	21:03:32	3bddda4a-a6dd-4fb8-a6b0-bbccdfc9accd	GET	undefined	/states/
+20230510	21:05:17	7badb619-3609-4168-9c3b-cae805238e2f	GET	undefined	/states/
+20230510	21:09:26	0fe4e69f-4542-4f08-8747-f1eb8a2c14fb	GET	undefined	/states/
+20230510	21:13:29	26b0f7a5-d091-42fb-af34-7f2dc8e7e106	GET	undefined	/states?contig=true
+20230510	21:13:34	245fe36f-75df-47f7-8a4a-ff2c8125f8d9	GET	undefined	/states?contig=false
+20230510	21:14:10	d2644a89-23ef-420c-a73c-6d93af54b5d3	GET	undefined	/states/NJ
+20230510	21:15:19	59fca09f-9803-4734-a067-ae4bd9e64a80	GET	undefined	/states/NJ
+20230510	21:15:30	1a707dbe-fe14-4e5e-ad7a-522c05121e70	GET	undefined	/states/NJ
+20230510	21:16:02	73a37ac7-6098-4560-9938-db813eabfa21	GET	undefined	/states/NJ

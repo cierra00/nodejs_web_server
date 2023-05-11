@@ -5,13 +5,7 @@ const data = {
     setStates: function (data) {this.states = data}
 };
 
-
-
-
-
 const getAllStates = async(req, res)=>{
-    
-
     //Get states from json file
    const statesData = await data.states;
    //get states from dB
@@ -33,12 +27,9 @@ const getAllStates = async(req, res)=>{
  
     for (let i = 0; i< stateDB.length; i++){
         for (let j = 0; j < statesData.length; j++){
-        if( stateDB[i].code === statesData[j].code)
-       statesData[j].funfacts = stateDB[i].funfact;
-        
-        
+            if( stateDB[i].code === statesData[j].code)
+                statesData[j].funfacts = stateDB[i].funfact;
         }
-       
     }
    
 
@@ -59,20 +50,7 @@ else if(contig==="true"){
   
    
 } 
-/*
-const getAllEmployees = async (req, res) => {
-    const employees = await Employee.find();
-    if (!employees) return res.status(204).json({ 'message': 'No employees found.' });
-    res.json(employees);
-}
 
-const getAllStates = async (req, res)=>{
-    
-    const states = await State.find({})
-    if (!states) return res.status(204).json({ 'message': 'No employees found.' });
-    res.json(states);
-
-}
 /*
 const createNewState = (req,res)=>{
     const newState = {
@@ -169,7 +147,7 @@ const getState = async (req,res)=>{
         return code.code === req.params.code.toUpperCase();
        });
     const state = await State.findOne({__id: req.params.code}).exec();
-   res.json(singleState)
+   res.json(singleState[0])
    
    /* if (!state) {
         return res.status(400).json({ "message": `State ID ${req.params.code} not found` });
