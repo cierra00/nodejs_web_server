@@ -15,9 +15,9 @@ const getAllStates = async(req, res)=>{
     //Get states from json file
    const statesData = await data.states;
    //get states from dB
-   const funfacts = await State.find();
+   const stateDB = await State.find({}).select('code').select('funfact');
    //combine all states
-   const result =  [...statesData, ...funfacts];
+   const result =  [...statesData, ...stateDB];
     //congtig & not contig
 
     //params
@@ -25,9 +25,22 @@ const getAllStates = async(req, res)=>{
    const isContig = await statesData.filter( function(code){
     return code.code !== "AK" && code.code !== "HI";
    });
+    
    const notContig = statesData.filter( function(code){
     return code.code == "AK" || code.code ==="HI";
    });
+
+ 
+    for (let i = 0; i< stateDB.length; i++){
+        for (let j = 0; j < statesData.length; j++){
+        if( stateDB[i].code === statesData[j].code)
+       statesData[j].funfact = stateDB[i].funfact;
+        
+        
+        }
+       
+    }
+   
 
 if(!req.query.contig){
    
@@ -43,19 +56,10 @@ else if(contig==="true"){
    
    return await res.json(notContig);
    }
+  
    
-   
-} /*
-const getAllStates = async (req, res) => {
-    const statesData = data.statesData;
-    const contig = req.query.contig;
-    for (stateRecord of statesData ) {
-        const funfact = await StatesDB.findOne({stateCode: stateRecord.code}, 'funfacts').lean();
-        if(funfact){
-            stateRecord.funfacts = [];
-            stateRecord.funfacts = stateRecord.funfacts.concat(funfact.funfacts);
-        }
-    }/*
+} 
+/*
 const getAllEmployees = async (req, res) => {
     const employees = await Employee.find();
     if (!employees) return res.status(204).json({ 'message': 'No employees found.' });
@@ -159,7 +163,7 @@ const getState = async (req,res)=>{
     const statesData = await data.states;
     
     if(!req?.params?.code) return res.status(400).json({'message': 'State code required' })
-    console.log(req.params.code)
+    
 
     const singleState = await statesData.filter( function(code){
         return code.code === req.params.code.toUpperCase();
