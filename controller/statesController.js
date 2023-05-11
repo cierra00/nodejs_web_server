@@ -6,6 +6,7 @@ const data = {
 };
 
 const getAllStates = async(req, res)=>{
+const contig = await req.query.contig;
     //Get states from json file
    const statesData = await data.states;
    //get states from dB

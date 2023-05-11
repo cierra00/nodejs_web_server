@@ -526,3 +526,12 @@
 20230510	22:27:54	3c34cf10-0d7f-4f14-8412-a368052d3cbd	GET	undefined	/states/ga/
 20230510	22:27:56	193fc140-8a08-4d67-8fd9-bd44c6267615	GET	undefined	/states/ga/
 20230510	22:28:18	754e1d37-c571-46b5-a97d-385262cacd67	GET	undefined	/states/ga/
+20230510	22:29:26	e492190e-5cdb-4702-896c-82ae73f08452	GET	undefined	/states
+20230510	22:30:50	23e532f1-0daa-4cec-a5c7-00c364e3fd0a	GET	undefined	/states?contig=true
+20230510	22:33:19	b47fb8bf-87dc-44fc-92f5-109af6275ded	GET	undefined	/states
+20230510	22:33:32	0943d583-b7ca-4cfb-ad0b-8e2930565bd6	GET	undefined	/states?contig=true
+20230510	22:34:03	6ef61c02-4e50-458e-9b16-dd6c0aaece9d	GET	undefined	/states?contig=true
+20230510	22:35:12	db4646cc-e443-45a3-aaa2-b7f726254445	GET	undefined	/states?contig=true
+20230510	22:35:36	5d75e983-a770-44af-bbae-90dd557b75fc	GET	undefined	/states?contig=true
+20230510	22:36:40	84ae214e-f082-48be-a805-088f1ab1efe8	GET	undefined	/states?contig=true
+20230510	22:36:54	6ab310f5-2c4d-404c-8573-9f8808f51f61	GET	undefined	/states?contig=false
