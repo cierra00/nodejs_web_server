@@ -11,17 +11,16 @@ const getAllStates = async(req, res)=>{
    //get states from dB
    const stateDB = await State.find({}).select('code').select('funfact');
    //combine all states
-   const result =  [...statesData, ...stateDB];
-    //congtig & not contig
+  
+   
 
     //params
-    const contig = req.query.contig;
    const isContig = await statesData.filter( function(code){
     return code.code !== "AK" && code.code !== "HI";
    });
     
    const notContig = statesData.filter( function(code){
-    return code.code == "AK" || code.code ==="HI";
+    return code.code === "AK" || code.code ==="HI";
    });
 
  
@@ -139,36 +138,18 @@ const getState = (req, res) => {
 } */
 const getState = async (req,res)=>{
     const statesData = await data.states;
+        
+        if(!req?.params?.code) return res.status(400).json({'message': 'State code required' })
+        
     
-    if(!req?.params?.code) return res.status(400).json({'message': 'State code required' })
-    
-
-    const singleState = await statesData.filter( function(code){
-        return code.code === req.params.code.toUpperCase();
-       });
-    const state = await State.findOne({__id: req.params.code}).exec();
-   res.json(singleState[0])
-   
-   /* if (!state) {
-        return res.status(400).json({ "message": `State ID ${req.params.code} not found` });
-    }
-    res.json(state);
-} */
+        const singleState = await statesData.filter( function(code){
+            return code.code === req.params.code.toUpperCase();
+           });
+       
+           const capital = await singleState.map(sta => sta)
+       res.json(capital)
 }
-const getFunfacts = async (req,res)=>{
-    const statesData = await data.states;
-    
-    if(!req?.params?.code) return res.status(400).json({'message': 'State code required' })
-    
 
-    const singleState = await statesData.filter( function(code){
-        return code.code === req.params.code.toUpperCase();
-       });
-   
-       const capital = await singleState.map(sta => sta.capital_city)
-   res.json(capital)
-
-    }
 
     const getCapital = async (req,res)=>{
         const statesData = await data.states;
@@ -185,61 +166,20 @@ const getFunfacts = async (req,res)=>{
     
         }
 
-        const getNickName = async (req,res)=>{
-            const statesData = await data.states;
-            
-            if(!req?.params?.code) return res.status(400).json({'message': 'State code required' })
-            
+      
         
-            const singleState = await statesData.filter( function(code){
-                return code.code === req.params.code.toUpperCase();
-               });
-           
-               const capital = await singleState.map(sta => sta.nickname)
-           res.json(capital)
-        
-            }
-        
-            const getPopulation = async (req,res)=>{
-                const statesData = await data.states;
-                
-                if(!req?.params?.code) return res.status(400).json({'message': 'State code required' })
-                
             
-                const singleState = await statesData.filter( function(code){
-                    return code.code === req.params.code.toUpperCase();
-                   });
-                   const name = await singleState.map(sta => sta.state)
-                   const population = await singleState.map(sta => sta.admission_date)
-               res.json(` ${name}, ${population}`)
-            
-                }
 
-                const getAdmission = async (req,res)=>{
-                    const statesData = await data.states;
-                    
-                    if(!req?.params?.code) return res.status(400).json({'message': 'State code required' })
-                    
                 
-                    const singleState = await statesData.filter( function(code){
-                        return code.code === req.params.code.toUpperCase();
-                       });
-                   
-                       const capital = await singleState.map(sta => sta.capital_city)
-                   res.json(capital)
-                
-                    }
 module.exports = {
     getAllStates,
     createNewState,
     updateState,
     DeleteState,
     getState,
-    getFunfacts,
+   
     getCapital,
-    getNickName,
-    getPopulation,
-    getAdmission,
+    
     
     
 }
