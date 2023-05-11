@@ -14,12 +14,21 @@ router.route('/')
 router.route('/:code')
 .get(statesController.getState)
 
-
+router.route('/:code/funfacts')
+.get(statesController.getFunfacts)
 
 router.route('/:code/capital')
 .get(statesController.getCapital)
 
+router.route('/:code/Admission')
+.get(statesController.getAdmission)
 
+router.route('/:code/Population')
+.get(statesController.getPopulation)
+
+
+router.route('/:code/nickname')
+.get(statesController.getNickname)
 
 
 

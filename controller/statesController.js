@@ -152,7 +152,7 @@ const getState = async (req,res)=>{
 }
 
 
-    const getCapital = async (req,res)=>{
+    const getPopulation = async (req,res)=>{
         const statesData = await data.states;
         
         if(!req?.params?.code) return res.status(400).json({'message': 'State code required' })
@@ -166,7 +166,62 @@ const getState = async (req,res)=>{
        res.json(capital)
     
         }
-
+        const getAdmission = async (req,res)=>{
+            const statesData = await data.states;
+            
+            if(!req?.params?.code) return res.status(400).json({'message': 'State code required' })
+            
+        
+            const singleState = await statesData.filter( function(code){
+                return code.code === req.params.code.toUpperCase();
+               });
+           
+               const capital = await singleState.map(sta => `${sta.state}, ${sta.admission_date}`)
+           res.json(capital)
+        
+            }
+            const getFunfacts = async (req,res)=>{
+                const statesData = await data.states;
+                
+                if(!req?.params?.code) return res.status(400).json({'message': 'State code required' })
+                
+            
+                const singleState = await statesData.filter( function(code){
+                    return code.code === req.params.code.toUpperCase();
+                   });
+               
+                   const capital = await singleState.map(sta => sta.funfacts="none")
+               res.json(capital)
+            
+                }
+            const getCapital = async (req,res)=>{
+                const statesData = await data.states;
+                
+                if(!req?.params?.code) return res.status(400).json({'message': 'State code required' })
+                
+            
+                const singleState = await statesData.filter( function(code){
+                    return code.code === req.params.code.toUpperCase();
+                   });
+               
+                   const capital = await singleState.map(sta => `${sta.state}: ${sta.capital_city}`)
+               res.json(capital)
+            
+                }
+                const getNickname = async (req,res)=>{
+                    const statesData = await data.states;
+                    
+                    if(!req?.params?.code) return res.status(400).json({'message': 'State code required' })
+                    
+                
+                    const singleState = await statesData.filter( function(code){
+                        return code.code === req.params.code.toUpperCase();
+                       });
+                   
+                       const capital = await singleState.map(sta => sta.capital_city)
+                   res.json(capital)
+                
+                    }
       
         
             
@@ -178,8 +233,12 @@ module.exports = {
     updateState,
     DeleteState,
     getState,
-   
+   getAdmission,
+   getFunfacts,
+   getPopulation,
     getCapital,
+    getNickname,
+
     
     
     
