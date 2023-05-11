@@ -34,7 +34,7 @@ const getAllStates = async(req, res)=>{
     for (let i = 0; i< stateDB.length; i++){
         for (let j = 0; j < statesData.length; j++){
         if( stateDB[i].code === statesData[j].code)
-       statesData[j].funfact = stateDB[i].funfact;
+       statesData[j].funfacts = stateDB[i].funfact;
         
         
         }
